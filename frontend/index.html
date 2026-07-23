@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@700;800&display=swap" rel="stylesheet">  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PrepWise — Your AI Interview Coach</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="chat-container">
+
+    <div id="home-screen" class="screen home-screen">
+      <div class="logo">
+        <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" fill="none" stroke="#ff6b6b" stroke-width="3"/>
+        <circle cx="32" cy="32" r="20" fill="none" stroke="#ffffff" stroke-width="3"/>
+        <circle cx="32" cy="32" r="10" fill="#ff6b6b"/>
+        <path d="M46 46 L58 58 M58 58 L52 58 M58 58 L58 52" stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+      <h1><span class="header-logo">◎</span> PrepWise</h1>
+      <p class="tagline">Your AI Interview Coach — practice smarter, walk in confident.</p>
+      <button id="start-btn" class="primary-btn">Start Practicing</button>
+    </div>
+
+    <div id="intake-screen" class="screen intake-screen hidden">
+      <h2>Tell us about your interview</h2>
+      <p class="intake-subtitle">
+      Let's personalize your interview experience in less than a minute.
+      </p>
+      <form id="intake-form">
+        <label>💼 What field or job are you preparing for?
+          <input type="text" id="field-input" placeholder="e.g. Marketing, Nursing, Python Developer" required />
+        </label>
+
+        <label>📈 Experience level
+          <select id="experience-input" required>
+            <option value="">Select...</option>
+            <option>Student</option>
+            <option>Fresher</option>
+            <option>1-3 years experience</option>
+            <option>3+ years experience</option>
+          </select>
+        </label>
+
+        <label>🎯 Which round are you preparing for?
+          <select id="round-input" required>
+            <option value="">Select...</option>
+            <option>Screening / HR round</option>
+            <option>Technical round</option>
+            <option>Coding round</option>
+            <option>Managerial round</option>
+            <option>Final round</option>
+          </select>
+        </label>
+
+        <label>📄 Job description (paste if you have one) — or just the role
+          <textarea id="jd-input" placeholder="Paste JD here, or just type the role title" required></textarea>
+        </label>
+
+        <label>📎 Upload resume (optional, .pdf or .docx)
+          <input type="file" id="resume-input" accept=".pdf,.docx" />
+        </label>
+
+        <button type="submit" class="primary-btn">Begin Interview</button>
+      </form>
+    </div>
+
+    <header id="chat-header" class="chat-header hidden">
+      <h1>🎯 PrepWise</h1>
+      <p>Your AI Interview Coach</p>
+    </header>
+
+    <div id="chat-messages" class="chat-messages hidden" data-theme="default"></div>
+
+    <div id="decision-buttons" class="decision-buttons hidden">
+      <button id="continue-btn" class="decision-btn continue">Continue ➡️</button>
+      <button id="stop-btn" class="decision-btn stop">Stop & See Score 🏁</button>
+    </div>
+
+    <form id="chat-form" class="chat-input-form hidden">
+      <input type="text" id="user-input" placeholder="Type your answer..." autocomplete="off" required />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
