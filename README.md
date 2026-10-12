@@ -101,7 +101,7 @@ a public HTTPS endpoint. The Gemini API key is injected as an environment
 variable directly in the Elastic Beanstalk environment — it is never
 present in the Docker image or committed to version control.
 
-**Live URL:** _add your final CloudFront HTTPS URL here once available_
+
 
 ## Security Notes
 
